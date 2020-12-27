@@ -17,12 +17,12 @@ def delete_trailing_slash(path_name):
     while path_name.endswith('/'):
         path_name = path_name[:-1]
     return path_name
-# Counts how many level deeps 
+# Counts how many level deeps
 def get_relative_depth(dir_path, level_offset):
     return dir_path.count(os.path.sep) - level_offset
 # Escape illagal Symbols for Latex
 def escape_illegal(name):
-    illegal_chaar_array = ['//', '&', '%', '$', '#', '_', '{', '}', '~', '^']
+    illegal_chaar_array = ['//', '&', '%', '$', '#',  '{', '}', '~', '^']
     for char in illegal_chaar_array:
         name = name.replace(char, "\\" + char)
     return name
@@ -46,12 +46,12 @@ if os.path.isdir(rootDir) and os.path.exists(rootDir):
         level = get_relative_depth(dirName, levelOffset)
         baseName = os.path.basename(dirName)
         if level == 1:  #for the first level only print the wole path
-            print(indentChar + "." + str(level) + "{" + escape_illegal(dirName) + "}.")
+            print('|' + "." + str(level) + "{" + escape_illegal(dirName) + "}.")
         else:
-            print(indentChar * level + ","+ str(level) + "{" + escape_illegal(dirName) + "}.")
+            print('|' + indentChar * (level-1) + "."+ str(level) + "{" + escape_illegal(dirName) + "}.")
         level += 1
         for fileName in sorted(fileList):
-            print(indentChar * level + "." + str(level) + " {" + escape_illegal(fileName) + "} .")
+            print('|' + indentChar * (level-1) + "." + str(level) + " {" + escape_illegal(fileName) + "} .")
     print("}")
 else:
     print("Error: root directory not found")
