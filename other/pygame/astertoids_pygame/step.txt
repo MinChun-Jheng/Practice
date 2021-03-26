@@ -1,0 +1,36 @@
+Step 1: Pygame Setup
+    Python Project
+    Pygame Code
+Step 2: Input Handling
+Step 3: Images
+    # add utils.py and load_sprite func to load image
+Step 4: Controlling Game Objects
+    # Create GameObject in models.py
+    Advanced Behavior
+    GameObject Class
+    Controlling the Speed
+Step 5: Spaceship
+    Creating a Class
+    Rotating the Spaceship
+    Accelerating the Spaceship
+    Wrapping Objects Around the Screen
+Step 6: Asteroids
+    Creating a Class
+    Randomizing the Position
+    Moving the Asteroids
+    Colliding With the Spaceship
+Step 7: Bullets
+    Creating a Class
+    Shooting a Bullet
+    Wrapping the Bullets
+    Colliding With Asteroids
+Step 8: Splitting the Asteroids
+Step 9: Playing Sounds
+Step 10: Ending the Game
+
+To Do:
+v Restrict the maximum speed of the spaceship.
+Play a sound when an asteroid is destroyed.
+Add a shield to the spaceship, allowing it to survive a single collision.
+Keep a record of the top scores.
+Make the bullets destroy the spaceship too and wrap them around the screen, making the game much more difficult!
